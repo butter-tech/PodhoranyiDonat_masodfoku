@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.masodfoku.HelloController" alignment="center" hgap="15" vgap="15">
+    <padding>
+        <Insets top="15" right="15" bottom="15" left="15"/>
+    </padding>
+
+    <!-- A, B, C mezők és egyenlet vizuális elrendezése -->
+    <Label text="x² +" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+    <TextField fx:id="aField" promptText="a értéke" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+    <Label text="x +" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+    <TextField fx:id="bField" promptText="b értéke" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
+
+    <Label text="= 0" GridPane.rowIndex="0" GridPane.columnIndex="4"/>
+    <TextField fx:id="cField" promptText="c értéke" GridPane.rowIndex="0" GridPane.columnIndex="5"/>
+
+    <!-- Számol gomb középre helyezve -->
+    <Button text="Számol" onAction="#calculate" GridPane.rowIndex="1" GridPane.columnIndex="2" GridPane.columnSpan="2"/>
+
+    <!-- Eredmény megjelenítése -->
+    <Label fx:id="resultLabel" text="Eredmény itt jelenik meg" GridPane.rowIndex="2" GridPane.columnIndex="0" GridPane.columnSpan="6" style="-fx-font-weight: bold; -fx-font-size: 14;"/>
+</GridPane>
